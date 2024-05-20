@@ -42,6 +42,9 @@ export default function StartupLogo() {
         <div className={styles.tri8}>
             <UmbrellaTriangleSvg  />
         </div>
+        <div className={styles.mainText}>
+            <span><i>U</i>mbre<i>ll</i>a</span>
+        </div>
         <audio ref={logoAudio} src="/startup_logo.mp3" />
     </div>
   );

@@ -3,7 +3,7 @@
     height: 100%;
     background-color: black;
     position: relative;
-    top:100px;
+    top: 20rem;
 }
 
 .startupLogo div {
@@ -15,12 +15,30 @@
     align-items: center;
 }
 
+.mainText span {
+    position: relative;
+    top: -20rem;
+    z-index: 55;
+    font-weight: bold;
+    font-size: 15rem;
+    letter-spacing: -8px;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    -webkit-text-stroke-width: 0.3rem;
+    -webkit-text-stroke-color: black;
+}
+
+.startupLogo svg {
+    height: 40rem;
+    width: 40rem;
+}
+
 .tri1 {
     z-index: 50;
 }
 
 .tri1 svg {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
     transform-origin: top;
     animation: spin-1-1 0.75s linear 3, spin-1-1 0.75s 2.25s linear 3;
 }
@@ -39,12 +57,13 @@
 }
 
 .tri2 svg {
-    transform: rotate(180deg);
+    transform: rotate(45deg);
     transform-origin: top;
     opacity: 1;
     animation: spin-2-1 0.75s linear 3, 
-        spin-2-2 0.09375s 2.90625s linear 1,
-        spin-2-3 0.75s 3s linear 2;
+        spin-2-2 0.65625s 2.25s linear 1, 
+        spin-2-3 0.09375s 2.90625s linear 1,
+        spin-2-4 0.75s 3s linear 2;
 }
 
 .tri2 svg path {
@@ -54,13 +73,24 @@
 @keyframes spin-2-1 {
     from {
         opacity: 0;
+        transform: rotate(180deg);
     }
     to {
         opacity: 0;
+        transform: rotate(180deg);
     }
 }
 
 @keyframes spin-2-2 {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes spin-2-3 {
     from {
       transform: rotate(180deg);
     }
@@ -69,7 +99,7 @@
     }
 }
 
-@keyframes spin-2-3 {
+@keyframes spin-2-4 {
     from {
       transform: rotate(225deg);
     }
@@ -123,13 +153,14 @@
 }
 
 .tri4 svg {
-    transform: rotate(270deg);
+    transform: rotate(135deg);
     transform-origin: top;
     opacity: 1;
     animation: spin-4-1 0.75s linear 3,
-        spin-4-1 0.5625s 2.25s linear 1,
-        spin-4-2 0.09375s 2.90625s linear 1,
-        spin-4-3 0.75s 3s linear 2;
+        spin-4-1 0.1875s 2.25s linear 1,
+        spin-4-2 0.46875s 2.4375s linear 1, 
+        spin-4-3 0.09375s 2.90625s linear 1,
+        spin-4-4 0.75s 3s linear 2;
 }
 
 .tri4 svg path {
@@ -150,11 +181,20 @@
       transform: rotate(270deg);
     }
     to {
-      transform: rotate(315deg);
+      transform: rotate(270deg);
     }
 }
 
 @keyframes spin-4-3 {
+    from {
+      transform: rotate(270deg);
+    }
+    to {
+      transform: rotate(315deg);
+    }
+}
+
+@keyframes spin-4-4 {
     from {
       transform: rotate(315deg);
     }
@@ -209,13 +249,14 @@
 }
 
 .tri6 svg {
-    transform: rotate(360deg);
+    transform: rotate(225deg);
     transform-origin: top;
     opacity: 1;
     animation: spin-6-1 0.75s linear 3,
         spin-6-1 0.5625s 2.25s linear 1,
-        spin-6-2 0.09375s 2.90625s linear 1,
-        spin-6-3 0.75s 3s linear 2;
+        spin-6-2 0.09375s 2.8125s linear 1, 
+        spin-6-3 0.09375s 2.90625s linear 1,
+        spin-6-4 0.75s 3s linear 2;
 }
 
 .tri6 svg path {
@@ -236,11 +277,20 @@
       transform: rotate(360deg);
     }
     to {
-      transform: rotate(405deg);
+      transform: rotate(360deg);
     }
 }
 
 @keyframes spin-6-3 {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(405deg);
+    }
+}
+
+@keyframes spin-6-4 {
     from {
       transform: rotate(405deg);
     }
@@ -295,13 +345,14 @@
 }
 
 .tri8 svg {
-    transform: rotate(450deg);
+    transform: rotate(315deg);
     transform-origin: top;
     opacity: 1;
     animation: spin-8-1 0.75s linear 3,
         spin-8-1 0.5625s 2.25s linear 1,
-        spin-8-2 0.09375s 2.90625s linear 1,
-        spin-8-3 0.75s 3s linear 2;
+        spin-8-2 0.09375s 2.8125s linear 1, 
+        spin-8-3 0.09375s 2.90625s linear 1,
+        spin-8-4 0.75s 3s linear 2;
 }
 
 .tri8 svg path {
@@ -322,11 +373,20 @@
       transform: rotate(450deg);
     }
     to {
-      transform: rotate(495deg);
+      transform: rotate(450deg);
     }
 }
 
 @keyframes spin-8-3 {
+    from {
+      transform: rotate(450deg);
+    }
+    to {
+      transform: rotate(495deg);
+    }
+}
+
+@keyframes spin-8-4 {
     from {
       transform: rotate(495deg);
     }
