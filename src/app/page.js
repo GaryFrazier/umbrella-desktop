@@ -1,17 +1,16 @@
 'use client';
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
+import StartupLogo from "./components/startupLogo";
 
-async function setupAppWindow(startupAudio, logoAudio) {
+async function setupAppWindow(startupAudio, setShowLogo) {
   const appWindow = (await import('@tauri-apps/api/window')).appWindow;
 
   setTimeout(() => {
     appWindow.show();
     if (startupAudio.current) {
       startupAudio.current.addEventListener('ended', () => {
-        if (logoAudio.current) {
-          logoAudio.current.play();
-        }
+        setShowLogo(true);
       });
       startupAudio.current.play();
     }
@@ -20,16 +19,16 @@ async function setupAppWindow(startupAudio, logoAudio) {
 
 export default function Home() {
   const startupAudio = useRef(null);
-  const logoAudio = useRef(null);
+  const [showLogo, setShowLogo] = useState(false);
 
   useEffect(() => {
-    setupAppWindow(startupAudio, logoAudio);
+    setupAppWindow(startupAudio, setShowLogo);
   }, [])
 
   return (
     <main className={styles.main}>
         <audio ref={startupAudio} src="/startup.mp3" />
-        <audio ref={logoAudio} src="/startup_logo.mp3" />
+        {showLogo ? <StartupLogo /> : null }
     </main>
   );
 }
