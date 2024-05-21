@@ -4,6 +4,36 @@
     background-color: black;
     position: relative;
     top: 20rem;
+    animation: full-1 1.5s 8.25s linear 1, full-2 1s 9.75s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes full-1 {
+    from {
+      transform: scale(1.0) translateY(0);
+    }
+    to {
+      transform: scale(0.75) translateY(20rem);
+    }
+}
+
+@keyframes full-2 {
+    from {
+        height: 20rem;
+        margin-left: auto;
+        padding-top: 20rem;
+        top: 40rem;
+        margin-right: auto;
+        width: 100%;
+    }
+    to {
+        height: 20rem;
+        margin-left: auto;
+        padding-top: 20rem;
+        top: 40rem;
+        margin-right: auto;
+        width: 100%;
+    }
 }
 
 .startupLogo div {
