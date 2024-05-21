@@ -18,29 +18,31 @@ export default function StartupLogo() {
 
   return (
     <div className={styles.startupLogo}>
-        <div className={styles.tri1}>
-            <UmbrellaTriangleSvg  />
-        </div>
-        <div className={styles.tri2}>
-            <UmbrellaTriangleSvg  />
-        </div>
-        <div className={styles.tri3}>
-            <UmbrellaTriangleSvg  />
-        </div>
-        <div className={styles.tri4}>
-            <UmbrellaTriangleSvg  />
-        </div>
-        <div className={styles.tri5}>
-            <UmbrellaTriangleSvg  />
-        </div>
-        <div className={styles.tri6}>
-            <UmbrellaTriangleSvg  />
-        </div>
-        <div className={styles.tri7}>
-            <UmbrellaTriangleSvg  />
-        </div>
-        <div className={styles.tri8}>
-            <UmbrellaTriangleSvg  />
+        <div className={styles.triContainer}>
+            <div className={styles.tri1}>
+                <UmbrellaTriangleSvg  />
+            </div>
+            <div className={styles.tri2}>
+                <UmbrellaTriangleSvg  />
+            </div>
+            <div className={styles.tri3}>
+                <UmbrellaTriangleSvg  />
+            </div>
+            <div className={styles.tri4}>
+                <UmbrellaTriangleSvg  />
+            </div>
+            <div className={styles.tri5}>
+                <UmbrellaTriangleSvg  />
+            </div>
+            <div className={styles.tri6}>
+                <UmbrellaTriangleSvg  />
+            </div>
+            <div className={styles.tri7}>
+                <UmbrellaTriangleSvg  />
+            </div>
+            <div className={styles.tri8}>
+                <UmbrellaTriangleSvg  />
+            </div>
         </div>
         <div className={styles.mainText}>
             <span><i>U</i>mbre<i>ll</i>a</span>

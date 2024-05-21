@@ -28,6 +28,54 @@
     -webkit-text-stroke-color: black;
 }
 
+.mainText {
+    animation: text-1 2.25s linear 1, text-2 2.5s 2.25s linear 1;
+    transform: translateX(5%);
+    z-index: 55;
+}
+
+@keyframes text-1 {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+}
+
+@keyframes text-2 {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(5%);
+    }
+}
+
+.triContainer {
+    transform-origin: 50% calc(50% - 20rem);
+    animation: tri-container-1 4.5s linear 1, tri-container-2 0.75s 4.5s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes tri-container-1 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+}
+
+@keyframes tri-container-2 {
+    from {
+      transform: translateX(0) rotate(0deg) scale(1.0);
+    }
+    to {
+      transform: translateX(-450px) rotate(360deg) scale(0.15);
+    }
+}
+
 .startupLogo svg {
     height: 40rem;
     width: 40rem;
